@@ -43,24 +43,25 @@ s.n. dasgupta
 cat < file1
 ## OUTPUT
 
-
+![alt text](img/1.png)
 
 cat < file2
 ## OUTPUT
 
+![alt text](img/2.png)
 
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
- 
+ ![alt text](img/3.png)
 comm file1 file2
  ## OUTPUT
-
+![alt text](img/4.png)
  
 diff file1 file2
 ## OUTPUT
 
-
+![alt text](img/5.png)
 #Filters
 
 ### Create the following files file11, file22 as follows:
@@ -83,47 +84,48 @@ cat > file22
 cut -c1-3 file11
 ## OUTPUT
 
-
+![alt text](img/6.png)
 
 
 cut -d "|" -f 1 file22
 ## OUTPUT
 
-
+![alt text](img/7.png)
 
 cut -d "|" -f 2 file22
 ## OUTPUT
 
-
+![alt text](img/8.png)
 cat < newfile 
 ```
 Hello world
 hello world
 ^d
-````
+```
 cat > newfile 
+```
 Hello world
 hello world
- 
+ ```
 grep Hello newfile 
 ## OUTPUT
 
-
+![alt text](img/9.png)
 
 grep hello newfile 
 ## OUTPUT
 
 
-
+![alt text](img/10.png)
 
 grep -v hello newfile 
 ## OUTPUT
 
-
+![alt text](img/11.png)
 
 cat newfile | grep -i "hello"
 ## OUTPUT
-
+![alt text](img/12.png)
 
 
 
@@ -131,16 +133,16 @@ cat newfile | grep -i -c "hello"
 ## OUTPUT
 
 
-
+![alt text](img/13.png)
 
 grep -R ubuntu /etc
 ## OUTPUT
 
-
+![alt text](img/14.png)
 
 grep -w -n world newfile   
 ## OUTPUT
-
+![alt text](img/15.png)
 
 cat < newfile 
 ```
@@ -164,60 +166,60 @@ Linux is best in this World
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
 
-
+![alt text](img/16.png)
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
 
-
+![alt text](img/17.png)
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
-
+![alt text](img/18.png)
 
 
 
 egrep '(^hello)' newfile 
 ## OUTPUT
-
+![alt text](img/19.png)
 
 
 egrep '(world$)' newfile 
 ## OUTPUT
-
+![alt text](img/20.png)
 
 
 egrep '(World$)' newfile 
 ## OUTPUT
 
-
+![alt text](img/21.png)
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
-
+![alt text](img/22.png)
 
 
 egrep '[1-9]' newfile 
 ## OUTPUT
 
-
+![alt text](img/23.png)
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
-
+![alt text](img/24.png)
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
 
-
+![alt text](img/25.png)
 egrep l{2} newfile
 ## OUTPUT
-
+![alt text](img/26.png)
 
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
 
-
+![alt text](img/27.png)
 cat > file23
 ```
 1001 | Ram | 10000 | HR
@@ -235,79 +237,80 @@ cat > file23
 sed -n -e '3p' file23
 ## OUTPUT
 
-
+![alt text](img/28.png)
 
 sed -n -e '$p' file23
 ## OUTPUT
 
-
+![alt text](img/29.png)
 
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
 
-
+![alt text](img/30.png)
 
 sed  -e '2s/Ram/Sita/' file23
 ## OUTPUT
 
-
+![alt text](img/31.png)
 
 sed  '/tom/s/5000/6000/' file23
 ## OUTPUT
 
-
+![alt text](img/32.png)
 
 sed -n -e '1,5p' file23
 ## OUTPUT
 
-
+![alt text](img/33.png)
 
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
 
-
+![alt text](img/34.png)
 
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
 
-
+![alt text](img/35.png)
 
 seq 10 
 ## OUTPUT
-
+![alt text](img/36.png)
 
 
 seq 10 | sed -n '4,6p'
 ## OUTPUT
 
-
+![alt text](img/37.png)
 
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
 
-
+![alt text](img/38.png)
 
 seq 3 | sed '2a hello'
 ## OUTPUT
 
-
+![alt text](img/39.png)
 
 seq 2 | sed '2i hello'
 ## OUTPUT
-
+![alt text](img/40.png)
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
-
+![alt text](img/41.png)
 
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
 
-
+![alt text](img/42.png)
 
 sed -n '2,4{s/$/*/;p}' file23
-
+## OUTPUT
+![alt text](img/43.png)
 
 #Sorting File content
 cat > file21
@@ -321,7 +324,7 @@ cat > file21
 sort file21
 ## OUTPUT
 
-
+![alt text](img/44.png)
 cat > file22
 ```
 1001 | Ram | 10000 | HR
@@ -334,13 +337,13 @@ cat > file22
 uniq file22
 ## OUTPUT
 
-
+![alt text](img/45.png)
 
 #Using tr command
 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
-
+![alt text](img/46.png)
 cat < urllist.txt
 ```
 www. yahoo. com
@@ -356,18 +359,18 @@ www. mrcet.... com
  ```
 cat urllist.txt | tr -d ' '
  ## OUTPUT
-
+![alt text](img/47.png)
 
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
 
-
+![alt text](img/48.png)
 
 #Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
-
+![alt text](img/49.png)
 
 mkdir backupdir
  
@@ -376,18 +379,19 @@ mv backup.tar backupdir
 tar -tvf backup.tar
 ## OUTPUT
 
-
+![alt text](img/50.png)
 tar -xvf backup.tar
 ## OUTPUT
-
+![alt text](img/51.png)
 gzip backup.tar
-
+## OUTPUT
+![alt text](img/52.png)
 ls .gz
 ## OUTPUT
- 
+ ![alt text](img/53.png)
 gunzip backup.tar.gz
 ## OUTPUT
-
+![alt text](img/54.png)
  
 # Shell Script
 ```
@@ -397,7 +401,7 @@ echo 'echo Hello World‘; exit 0 >> my-script.sh
 chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
-
+![alt text](img/55.png)
  
 cat << stop > herecheck.txt
 ```
@@ -409,7 +413,7 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
-
+![alt text](img/56.png)
 
 cat < scriptest.sh 
 ```bash
@@ -447,11 +451,11 @@ chmod 777 scriptest.sh
 ./scriptest.sh 1 2 3
 
 ## OUTPUT
-
+![alt text](img/57.png)
  
 ls file1
 ## OUTPUT
-
+![alt text](img/58.png)
 echo $?
 ## OUTPUT 
 ./one
