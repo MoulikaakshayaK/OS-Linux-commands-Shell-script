@@ -458,17 +458,18 @@ ls file1
 ![alt text](img/58.png)
 echo $?
 ## OUTPUT 
+![alt text](img/59.png)
 ./one
 bash: ./one: Permission denied
  
 echo $?
 ## OUTPUT 
- 
+ ![alt text](img/60.png)
 abcd
  
 echo $?
  ## OUTPUT
-
+![alt text](img/61.png)
 
  
 # mis-using string comparisons
@@ -500,14 +501,14 @@ echo "$val1 is less than $val2"
 fi
 ```
 ##OUTPUT
-
+![alt text](img/62.png)
 
 
 chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
-
+![alt text](img/63.png)
 
 # check file ownership
 cat < psswdperm.sh 
@@ -534,7 +535,7 @@ fi
  ```
 ./psswdperm.sh
 ## OUTPUT
-
+![alt text](img/64.png)
 # check if with file location
 cat>ifnested.sh 
 ```bash
@@ -580,7 +581,7 @@ fi
 
 ./ifnested.sh 
 ## OUTPUT
-
+![alt text](img/65.png)
 
 
 # using numeric test comparisons
@@ -623,8 +624,8 @@ fi
 $ chmod 755 iftest.sh
  
 $ ./iftest.sh 
-##OUTPUT
-
+## OUTPUT
+![alt text](img/66.png)
 # check if a file
 cat > ifnested.sh 
 ```bash
@@ -672,8 +673,8 @@ fi
 $ chmod 755 ifnested.sh
  
 $ ./ifnested.sh 
-##OUTPUT
-
+## OUTPUT
+![alt text](img/67.png)
 # looking for a possible value using elif
 cat elifcheck.sh 
 ```bash
@@ -701,7 +702,7 @@ $ chmod 755 elifcheck.sh
  
 $ ./elifcheck.sh 
 ## OUTPUT
-
+![alt text](img/68.png)
 
 # testing compound comparisons
 cat> ifcompound.sh 
@@ -717,7 +718,7 @@ fi
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh 
 ## OUTPUT
-
+![alt text](img/69.png)
 # using the case command
 cat >casecheck.sh 
 ```bash
@@ -735,7 +736,9 @@ esac
 ```
 $ chmod 755 casecheck.sh 
  
-$ ./casecheck.sh 
+$ ./casecheck.sh
+## OUTPUT
+![alt text](img/70.png) 
  
 cat > whiletest
 ```bash
@@ -751,7 +754,8 @@ done
 $ chmod 755 whiletest.sh
  
 $ ./whiletest.sh
- 
+## OUTPUT
+![alt text](img/71.png)
  
 cat untiltest.sh 
 ```bash
@@ -764,10 +768,13 @@ var1=$[ $var1 - 25 ]
 done
 ``` 
 $ chmod 755 untiltest.sh
+$ ./untiltest.sh
+
  
+## OUTPUT  
+![alt text](img/72.png)
+ cat forin1.sh
  
- 
-cat forin1.sh 
 ```bash
 \#!/bin/bash
 \#basic for command
@@ -778,8 +785,10 @@ done
  ```
  
 $ chmod 755 forin1.sh
- 
- 
+$ ./forin1.sh
+
+## OUTPUT
+ ![alt text](img/73.png)
 cat forin2.sh 
 ```bash
 \#!/bin/bash
@@ -791,19 +800,9 @@ done
  ```
  
 $ chmod 755 forin2.sh
- 
-cat forin2.sh 
-```bash
-\#!/bin/bash
-\# another example of how not to use the for command
-for test in I don't know if this'll work
-do
-echo “word:$test”
-done
-```
-$ chmod 755 forin2.sh
- 
-$ ./forin2.sh 
+$ ./forin2.sh
+## OUTPUT
+![alt text](img/74.png)
  
 cat forin3.sh 
 ```bash
@@ -814,20 +813,11 @@ do
 echo "word:$test"
 done
 ```
+$chmod 755 forin3.sh
 $ ./forin3.sh 
- 
-cat forin1.sh 
-```bash
-#!/bin/bash
-# basic for command
-for test in Alabama Alaska Arizona Arkansas California Colorado
-do
-echo The next state is $test
-done
-```
-$ chmod 755 forin1.sh
-
 ## OUTPUT
+![alt text](img/75.png)
+
 cat forinfile.sh 
 ```bash
 #!/bin/bash
@@ -839,7 +829,9 @@ echo "Visit beautiful $file“
 done
 ```
 $ chmod 777 forinfile.sh
-$ cat cities
+$ ./forinfile.sh
+## OUTPUT
+![alt text](img/76.png)
 Hyderabad
 Alampur
 Basara
@@ -848,7 +840,6 @@ Adilabad
 Bhadrachalam
 Khammam
 
-## OUTPUT
 
 
 cat forctype.sh 
@@ -863,12 +854,13 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype.sh 
 ## OUTPUT
+![alt text](img/77.png)
 
 cat forctype1.sh 
 ```bash
 #!/bin/bash
 # multiple variables
-for (( a=1, b=5; a <= 5; a++, b-- ))
+for (( a=1, b=5; a <= 5; a++;b-- ))
 do
 echo "$a - $b"
 done
@@ -876,7 +868,7 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype1.sh 
 ## OUTPUT
-
+![alt text](img/78.png)
 cat fornested1.sh 
 ```bash
 #!/bin/bash
@@ -889,13 +881,13 @@ do
 echo " Inside loop: $b"
 done
 done
+
 ```
 $ chmod 755 fornested1.sh
  
 $ ./fornested1.sh 
  ## OUTPUT
-
- 
+![alt text](img/79.png)
 cat forbreak.sh 
 ```bash
 #!/bin/bash
@@ -910,12 +902,12 @@ echo "Iteration number: $var1"
 done
 echo "The for loop is completed“
 ```
-## OUTPUT
 
 $ chmod 755 forbreak.sh
  
 $ ./forbreak.sh 
- 
+ ## OUTPUT
+![alt text](img/80.png)
 cat forbreak.sh 
 ```bash
 #!/bin/bash
@@ -936,7 +928,7 @@ $ chmod 755 forcontinue.sh
  
 $ ./forcontinue.sh 
 ## OUTPUT
- 
+![alt text](img/81.png)
 cat exread.sh 
 ```bash
 #!/bin/bash
@@ -950,7 +942,7 @@ $ chmod 755 exread.sh
  
 $ ./exread.sh 
 ## OUTPUT
-
+![alt text](img/82.png)
 
  cat exread1.sh
 ```bash
@@ -960,13 +952,9 @@ read -p "Enter your name: " name
 echo "Hello $name, welcome to my program. “
 ``` 
 $ chmod 755 exread1.sh 
-
+$ ./exread1.sh
 ## OUTPUT
-
-
-
-$ ./exread1.sh 
- 
+![alt text](img/83.png)
 cat funcex.sh
 ```bash
 #!/bin/bash
@@ -982,13 +970,11 @@ else
 echo "Usage: badtest1 a b"
 fi
 ```
+$ chmod 755 funcex.sh
+$./funcex.sh 
 ## OUTPUT
- ./funcex.sh 
+ ![alt text](img/84.png)
 
- 
- ./funcex.sh 1 2
-
- 
 cat argshift.sh
 ```bash
 #!/bin/bash 
@@ -998,8 +984,9 @@ cat argshift.sh
 done
 ```
 $ chmod 777 argshift.sh
-
+$ ./argshift.sh
 ## OUTPUT
+![alt text](img/85.png)
 $ ./argshift.sh 1 2 3
  
  cat argshift1.sh
@@ -1062,7 +1049,7 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
- 
+ ![alt text](img/86.png)
 cat > palindrome.sh
 ```bash
 #num=545
@@ -1090,6 +1077,6 @@ fi
 ```
 ## OUTPUT 
 
-
+![alt text](img/87.png)
 # RESULT:
 The Commands are executed successfully.
